@@ -4,7 +4,6 @@ import {BiShow,BiHide} from "react-icons/bi";
 import { Link, useNavigate } from "react-router-dom";
 import { BsEmojiSmileUpsideDown } from "react-icons/bs";
 import { ImagetoBase64 } from "../utility/ImagetoBase64";
-import { toast } from "react-hot-toast";
 
 function Signup() {
     const navigate = useNavigate()
