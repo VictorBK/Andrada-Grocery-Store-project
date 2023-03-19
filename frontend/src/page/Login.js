@@ -52,7 +52,7 @@ const Login = () => {
 
       const dataRes = await fetchData.json()
       console.log(dataRes)
-      console.log(userData)
+     
       toast(dataRes.message)
 
       if (dataRes.alert) {
