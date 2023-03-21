@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 function App() {
   const dispatch = useDispatch()
   const productData = useSelector((state)=>state.product)
-  
+ 
   useEffect(()=>{
     (async()=>{
       const res = await fetch(`${process.env.REACT_APP_SERVER_DOMIN}/product`)
@@ -20,14 +20,16 @@ function App() {
     })()
   },[])
 
-  
   return (
-    <div>
-        <Header/>
-        <main className='pt-16 bg-slate-100 min-h-[calc(100vh)]'>
-          <Outlet/>
+    <>
+      <Toaster />
+      <div>
+        <Header />
+        <main className="pt-16 bg-slate-100 min-h-[calc(100vh)]">
+          <Outlet />
         </main>
-    </div>    
+      </div>
+    </>
   );
 }
 
