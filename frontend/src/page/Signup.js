@@ -48,14 +48,14 @@ function Signup() {
       })
 
   }
-console.log(process.env.REACT_APP_SERVER_DOMIN)
+console.log(process.env.REACT_APP_SERVER_DOMAIN)
   const handleSubmit = async(e) => {
     e.preventDefault();
     const { firstName, email, password, confirmPassword } = data;
     if (firstName && email && password && confirmPassword) {
       if (password === confirmPassword) {
           console.log(data)
-          const fetchData = await fetch(`${process.env.REACT_APP_SERVER_DOMIN}/signup`,{
+          const fetchData = await fetch(`${process.env.REACT_APP_SERVER_DOMAIN}/signup`,{
             method : "POST",
             headers : {
               "content-type" : "application/json"
@@ -66,7 +66,7 @@ console.log(process.env.REACT_APP_SERVER_DOMIN)
           const dataRes = await fetchData.json()
           console.log(dataRes)
 
-        // alert(dataRes.message);
+        alert(dataRes.message);
         toast(dataRes.message)
         if(dataRes.alert){
           navigate("/login");
@@ -76,7 +76,7 @@ console.log(process.env.REACT_APP_SERVER_DOMIN)
         alert("password and confirm password not equal");
       }
     } else {
-      alert("Please Enter required fields");
+      alert("Please enter required fields");
     }
   };
 
