@@ -87,7 +87,7 @@ app.post("/login", (req, res) => {
 
 const schemaProduct = mongoose.Schema({
   name: String,
-  category:String,
+  category: String,
   image: String,
   price: String,
   description: String,
