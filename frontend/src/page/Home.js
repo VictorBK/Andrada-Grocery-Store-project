@@ -11,7 +11,7 @@ const Home = () => {
   const productData = useSelector((state) => state.product.productList);
   const homeProductCartList = productData.slice(1, 5);
   const homeProductCartListVegetables = productData.filter(
-    (el) => el.category === "vegetable",
+    (el) => el.category === "vegetables",
     []
   );
   const loadingArray = new Array(4).fill(null);
@@ -97,7 +97,7 @@ const Home = () => {
             ? homeProductCartListVegetables.map((el) => {
                 return (
                   <CardFeature
-                    key={el._id+"vegetable"}
+                    key={el._id+"vegetables"}
                     id={el._id}
                     name={el.name}
                     category={el.category}
@@ -110,6 +110,7 @@ const Home = () => {
                 <CardFeature loading="Loading..." key={index+"cartLoading"} />
               ))}
         </div>
+
       </div>
       
       <AllProduct heading={"Your Product"}/>
