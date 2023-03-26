@@ -5,17 +5,16 @@ import { addCartItem,increaseQty } from "../redux/productSlide";
 
 const CardFeature = ({ image, name, price, category, loading, id }) => {
   const dispatch = useDispatch()
-
-  const handleAddCartProduct = (e) => {
-    dispatch(addCartItem({
-      _id : id,
-      name : name,
-      price : price,
-      category : category,
-      image : image
-    }))
-  };
-
+  const handleAddCartProduct = (e)=> {
+      dispatch(addCartItem({
+        _id : id,
+        name : name,
+        price : price,
+        category : category,
+        image : image
+      }))
+      alert("Adding item to Cart")
+  }
   return (
     <div className="w-full min-w-[200px] max-w-[200px] bg-white hover:shadow-lg drop-shadow-lg py-5 px-4 cursor-pointer flex flex-col ">
       {image ? (
@@ -37,9 +36,7 @@ const CardFeature = ({ image, name, price, category, loading, id }) => {
             </p>
           </Link>
           <button
-            className="bg-yellow-500 py-1 mt-2 rounded hover:bg-yellow-600 w-full"
-            onClick={handleAddCartProduct}
-          >
+            className="bg-yellow-500 py-1 mt-2 rounded hover:bg-yellow-600 w-full" onClick={handleAddCartProduct}>
             Add Cart
           </button>
         </>
