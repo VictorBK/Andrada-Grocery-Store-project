@@ -17,6 +17,7 @@ const AllProduct = ({heading, loading}) => {
   },[productData])
  
   const handleFilterProduct = (category)=>{
+    setFilterBy(category)
     const filter = productData.filter(
       (el) => el.category.toLowerCase() === category.toLowerCase()
     )
@@ -35,11 +36,12 @@ const AllProduct = ({heading, loading}) => {
 
     <div className="flex gap-4 justify-center overflow-scroll scrollbar-none">
           {categoryList[0] ? (
-             categoryList.map(el =>{
+             categoryList.map((el) => {
               return(
                 <FilterProduct 
                   category={el} 
                   key={el}
+                  isActive={el.toLocaleLowerCase === filterby.toLocaleLowerCase()}
                   onClick={()=>handleFilterProduct(el)}/>
               )
             })
