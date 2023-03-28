@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import loginSignupImage from "../assets/login-animation.gif";
 import { BiShow, BiHide } from "react-icons/bi";
 import { Link, useNavigate } from "react-router-dom";
-import { BsEmojiSmileUpsideDown } from "react-icons/bs";
+import { BsEmojiSmileUpsideDown } from "react-icons/bs"
 import { ImagetoBase64 } from "../utility/ImagetoBase64";
 import { toast } from "react-hot-toast";
 
@@ -73,7 +73,7 @@ console.log(process.env.REACT_APP_SERVER_DOMAIN)
         }
        
       } else {
-        alert("password and confirm password not equal");
+        alert("Password and Confirm Password not equal");
       }
     } else {
       alert("Please enter required fields");
@@ -167,7 +167,7 @@ console.log(process.env.REACT_APP_SERVER_DOMAIN)
           </button>
         </form>
         <p className="text-left text-sm mt-2">
-          Already have account ?{" "}
+          Already have an account ?{" "}
           <Link to={"/login"} className="text-red-500 underline">
             Login
           </Link>
