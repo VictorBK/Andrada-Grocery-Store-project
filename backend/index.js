@@ -38,7 +38,7 @@ app.get("/", (req, res) => {
 });
 
 //sign up
-app.post("/signup", async (req, res) => {
+app.post("/signup", async(req,res)=>{
   console.log(req.body);
   const { email } = req.body;
 
@@ -46,7 +46,7 @@ app.post("/signup", async (req, res) => {
     console.log(result);
     console.log(err);
     if (result) {
-      res.send({ message: "Email id is already register", alert: false });
+      res.send({ message: "Email id is already registered", alert: false });
     } else {
       const data = userModel(req.body);
       const save = data.save();
@@ -114,4 +114,4 @@ app.get("/product",async(req,res)=>{
 
 
 //server is ruuning
-app.listen(PORT, () => console.log("server is running at port : " + PORT));
+app.listen(PORT,()=>console.log("server is running at port : " + PORT));
