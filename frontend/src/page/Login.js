@@ -3,7 +3,7 @@ import loginSignupImage from "../assets/login-animation.gif";
 import { BiShow, BiHide } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { BsEmojiSmileUpsideDown } from "react-icons/bs";
-import { toast } from "react-hot-toast"
+import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { loginRedux } from "../redux/userSlice";
@@ -112,7 +112,7 @@ const Login = () => {
           </button>
         </form>
         <p className="text-left text-sm mt-2">
-          Don't  have account ?{" "}
+          Don't have an account ?{" "}
           <Link to={"/signup"} className="text-red-500 underline">
             Sign Up
           </Link>
