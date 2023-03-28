@@ -5,7 +5,7 @@ import { BiUserCircle } from "react-icons/bi";
 import { GiShoppingCart } from "react-icons/gi";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutRedux } from "../redux/userSlice";
-import { toast } from "react-hot-toast";
+import { toast } from "react-hot-toast"
 
 
 const Header = () => {
